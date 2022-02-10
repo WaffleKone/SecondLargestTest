@@ -4,7 +4,7 @@ let largestNum = myArr[0]
 let secondLargestNum = myArr[0]
 
 let header = document.createElement('h1')
-header.textContent = 'Click Me!'
+header.textContent = 'Click Me! also check console lol'
 document.body.append(header)
 
 console.log ("This is the current array:", myArr)
@@ -32,4 +32,4 @@ for (i=0; i<myArr.length; i++) {
 }
 console.log(secondLargestNum)
 }
-asd
+
