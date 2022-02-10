@@ -1,5 +1,7 @@
 let myArr = [12, 7, 32, 48, 500, 504, 1]
 
+let timesClicked = 0
+
 let largestNum = myArr[0]
 let secondLargestNum = myArr[0]
 
@@ -10,6 +12,8 @@ document.body.append(header)
 console.log ("This is the current array:", myArr)
 
 header.addEventListener('click', secondLargFinder)
+
+header.addEventListener('click', changeText)
 
 header.addEventListener('mouseover', function() {
   header.style.color = 'blue'
@@ -26,10 +30,20 @@ for (i=0; i<myArr.length; i++) {
         largestNum = myArr[i]
         
     }
-    else if (myArr[i]>secondLargestNum && myArray[i] !=largestNum) {
+    else if (myArr[i]>secondLargestNum && myArr[i] !=largestNum) {
         secondLargestNum = myArr[i]
     }
 }
 console.log(secondLargestNum)
+}
+function changeText(e) {
+  if (timesClicked == 68) {
+    timesClicked += 1
+    e.target.textContent = ("nice")
+  }
+  else {
+    timesClicked += 1
+    e.target.textContent = ("I have been clicked " + timesClicked + " times!")
+  }
 }
 
